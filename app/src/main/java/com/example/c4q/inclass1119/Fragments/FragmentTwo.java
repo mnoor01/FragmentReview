@@ -12,10 +12,10 @@ import com.example.c4q.inclass1119.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class MainFragment extends Fragment {// new stuff to fragmentone
+public class FragmentTwo extends Fragment {
 
 
-    public MainFragment() {
+    public FragmentTwo() {
         // Required empty public constructor
     }
 
@@ -24,7 +24,7 @@ public class MainFragment extends Fragment {// new stuff to fragmentone
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_main, container, false);
+        return inflater.inflate(R.layout.fragment_fragment_two, container, false);
     }
 
 }

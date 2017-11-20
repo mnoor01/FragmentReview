@@ -13,11 +13,11 @@ import com.example.c4q.inclass1119.R;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FragmentTwo extends Fragment {
+public class FragmentThree extends Fragment {
     private View rootView;
 
 
-    public FragmentTwo() {
+    public FragmentThree() {
         // Required empty public constructor
     }
 
@@ -25,13 +25,15 @@ public class FragmentTwo extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        rootView=inflater.inflate(R.layout.fragment_two, container, false);
-        TextView txt02=(TextView) rootView.findViewById(R.id.txt02);
-        Bundle bundle=getArguments();//here I am getting the things I saved from the button02 onclicklistener.
+        rootView=inflater.inflate(R.layout.fragment_three, container, false);//this is so we can call on different view in the fragment_three xml
+        TextView text03=(TextView) rootView.findViewById(R.id.txt03);
+        Bundle bundle=getArguments();
+        String textFromEditText= bundle.getString("random03","nothing passed");
+        text03.setText(textFromEditText);
+
+
+
         // Inflate the layout for this fragment
-        String getFromEditText=bundle.getString("random02","Don;t know what happened yet");
-        //now we are going to set the textview in the framenttwo xml tot the value of get fromedittext
-        txt02.setText(getFromEditText);
         return rootView ;
     }
 
